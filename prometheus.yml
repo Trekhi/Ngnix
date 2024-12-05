@@ -1,0 +1,10 @@
+global:
+  scrape_interval: 15s  # Intervalo de recolección de métricas
+
+scrape_configs:
+  - job_name: 'app_example'
+    static_configs:
+      - targets: ['app_example:8080', 'app_example2:8080']
+  - job_name: 'nginx'
+    static_configs:
+      - targets: ['nginx_exporter:9113']
